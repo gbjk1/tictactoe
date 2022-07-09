@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Tic-Tac-Toe</title>
+		<link rel="stylesheet" href="css/style_aboutUs.css">
+		<script src="quickChart.js"></script>
+		<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+		<link rel="preconnect" href="https://fonts.googleapis.com"> 
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+	</head>
+	<body>
+        <main id="main">
+            <img class="pic" src="img/tictactoe.png" alt="">
+            <div class="mainGlassBox">
+				<nav data-gjs="navbar-menu" class="navbar-menu">
+					<a href="index.html" class="navbar-menu-link" style="text-decoration: none;">Back to start page</a>
+				</nav>
+				<div class="field">
+					This game was created by Valentin Kogard, Guntram Klaus and Samuel Kominek as part of a training unit at university. 
+					<br><br>
+					The team wishes you a lot of fun while playing - may the best one win.
+				</div>
+				<img id="graph" src="/" alt ="Chart">
+				<!-- statistik kommt ihr rein / funktioniert aber scheinbar nur mit nodejs -->
+				<div class="bottom">
+					<a href="aboutUs.html" class="navbar-menu-link">About</a>
+					&copy; Kogard, Klaus, Kominek - 2022
+				</div>
+            </div>
+        </main>
+		<button class="themeButton" onclick="swapTheme()">Swap Theme</button>
+    </body>
+</html>

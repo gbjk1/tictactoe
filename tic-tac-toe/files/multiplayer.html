@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Tic-Tac-Toe</title>
+		<link rel="stylesheet" href="css/style_multiplayer.css">
+		<script src="multiplayer.js"></script>
+
+		<link rel="preconnect" href="https://fonts.googleapis.com"> 
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+		<main id="main">
+			<div class="mainGlassBox">
+				<img class="pic" onclick="toIndex()" src="img/tictactoe.png" alt="">
+				<nav data-gjs="navbar-menu" class="navbar-menu">
+					<!--<a href="./index.html">Singleplayer</a>-->
+					
+				</nav>
+				<div class="pitch">
+					<br>
+					<table id="table">
+						<tr class="infoRow">
+							<td id="p1"></td>
+							<td id="p2"></td>
+							<td id="pin"></td>
+						</tr>
+					</table>
+					<br>
+					<div class="tic-tac-toe"></div>
+				</div>
+				<button class="themeButton" onclick="swapTheme()">Swap Theme</button>
+				<div>
+					&copy; Kogard, Klaus, Kominek - 2022
+				</div>
+			</div>
+		</main>
+    </body>
+</html>

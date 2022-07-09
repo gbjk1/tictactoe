@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Tic-Tac-Toe</title>
+		<link rel="stylesheet" href="css/style_index.css">
+		<script src="index.js"></script>
+		<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+		<link rel="preconnect" href="https://fonts.googleapis.com"> 
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+	</head>
+	<body>
+        <main id="main">
+            <section class="mainGlassBox">
+				<div class="login_form" id="login_form">
+					<br>
+					<h2 class="createuser">TikTakTok</h2>
+					<br>
+					<img class="pic" src="img/tictactoe.png" alt="">
+				</div>
+				<div class="field">
+					
+					<div class="log">
+						<div class="pitch">
+							<table class="singleplayerTable">
+								<tr>
+									<td></td>
+									<td style="color: aliceblue; font-weight: 700;">Singleplayer</td>
+									<td></td>
+								</tr>
+							</table>
+							<br>
+							<div class="tic-tac-toe"></div>
+						</div>
+						<div class="login_form">
+							<br><br>
+							<h2 class="createuser">Create a user for multiplayer mode</h2>
+							<br>
+						</div>
+						<div class="login_input">
+							<div class="g-recaptcha" data-callback="recaptchaCallback" data-sitekey="6Lf25hEgAAAAAMXRKY5TXxu3OWaO1AgqpKtgXRCX"></div>
+							<h3>Join a game:</h3>
+							<form action="api/join" method="post" class="join">
+								<label class="nameJoin" for="nameJoin">Enter name:</label>
+								<input type="text" name="nameJoin" id="nameJoin" required><br>
+								<label for="gamePIN">Enter PIN:</label> 
+								<input type="number" name="gamePIN" id="gamePIN" required><br>
+								<!--<div class="recaptcha_visible_1" style="visibility: hidden;">-->
+									<!--<div class="g-recaptcha" data-callback="recaptchaCallbackJoin" data-sitekey="6Lf25hEgAAAAAMXRKY5TXxu3OWaO1AgqpKtgXRCX"></div>-->
+								<!--</div>-->
+								<input id="joinBtn" class="StartGame" type="submit" value="Join" disabled><br>
+							</form>
+							<h3>Create a game:</h3>
+							<form action="api/create" method="post" class="create">
+								<label for="nameCreate">Enter name:</label>
+								<input type="text" name="nameCreate" id="nameCreate" required><br>
+								<!--<div class="recaptcha_visible_1" style="visibility: hidden;">-->
+								<!--<div class="g-recaptcha" data-callback="recaptchaCallbackCreate" data-sitekey="6Lf25hEgAAAAAMXRKY5TXxu3OWaO1AgqpKtgXRCX"></div>-->
+								<!--</div>-->
+								<input id="createBtn" class="StartGame" type="submit" value="Create" disabled><br>
+							</form>
+						</div>
+					</div>
+				</div>
+				<button class="themeButton" onclick="swapTheme()">Swap Theme</button>
+				<div class="bottomInfo">
+					<a href="aboutUs.html" class="navbar-menu-link">About</a>
+					&copy; Kogard, Klaus, Kominek - 2022
+				</div>
+            </section>
+        </main>
+    </body>
+</html>

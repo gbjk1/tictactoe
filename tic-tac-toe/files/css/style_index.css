@@ -1,0 +1,303 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+main {
+
+    min-height: 100vh;
+    background: linear-gradient(to left bottom, rgb(22, 20, 31), rgb(24, 57, 70));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.mainGlassBox {
+    border-radius: 40px;
+    background: white;
+    min-height: 70vh;
+    width: 60%;
+    background: linear-gradient(to left, rgba(255,255,255,0.3), rgba(168, 167, 167,0.3));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    justify-content: space-evenly;
+}
+
+.createuser {
+    color: white;
+}
+
+.avatarimg {
+    height: 3rem;
+    opacity: 0.8;
+}
+
+.singleplayerTable {
+    width: 100%
+}
+
+.login_input {
+    color: white;
+    font-weight: 700;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.info {
+    margin-top: 5px;
+    font-size: 10px;
+    color: orange;
+}
+
+.pic {
+    opacity: 0.9;
+    max-width: 130px;
+    position: relative;
+}
+
+.StartGame {
+    height: 40px;
+    width: 160px;
+    border-radius: 5px;
+    background-color: orange;
+    font-weight: 700;
+    font-size: 1rem;
+    color: black;
+}
+
+.SwapTheme {
+    height: 40px;
+    border-radius: 5px;
+    background-color: white;
+    font-weight: 700;
+}
+
+.field {
+	/*display: grid;
+	grid-template-columns: 3fr 1fr;
+	grid-template-rows: 1fr;
+	grid-template-areas: 
+        "log pitch";*/
+}
+.log {
+	grid-area: log;
+}
+
+.pitch {
+	grid-area: pitch;
+}
+
+body {
+    margin: 0;
+    background: url(../img/tictactoe_front_img.jpg);
+    background-size: cover;
+    background-position: center;
+    font-family: sans-serif;
+}
+
+.pitch{
+    position: relative;
+    
+	margin-top: 15px;
+	margin-bottom: 15px;
+    border-radius: 20px;
+    width: 90%;
+    /*background-color: rgba(128, 128, 128, 0.2);*/
+    text-align: center;
+    transform: translate(5%, 0);
+}
+
+
+.tic-tac-toe table {
+	border-collapse: collapse;
+	margin: 0 auto;
+	margin-bottom: 15px;
+}
+
+.tic-tac-toe td {
+	/*border: 1px solid black;*/
+	height: 5em;
+	position: relative;
+	text-align: center;
+	width: 5em;
+}
+
+.tic-tac-toe tr:nth-child(2){
+    border-top: 6px solid black;
+    border-bottom: 6px solid black;
+}
+
+.tic-tac-toe td:nth-child(3n+2){
+    border-left: 6px solid black;
+    border-right: 6px solid black;
+}
+
+.tic-tac-toe table:not(.game-over) td {
+	cursor: pointer;
+}
+
+.tic-tac-toe td button {
+	position: absolute;
+	left: -100vw;
+}
+
+.tic-tac-toe .o {
+	background: rgba(165, 209, 115, 0.9);
+	color: rgba(255, 255, 255, 0.1);
+	border-radius: 20px;
+}
+
+.tic-tac-toe .x {
+	background: rgba(229, 241, 119, 0.9);
+	color: rgba(229, 241, 119, 0.9);
+    border-radius: 20px;
+}
+
+.tic-tac-toe .o,
+.tic-tac-toe .x {
+	z-index: -1;
+}
+
+.tic-tac-toe .o::after,
+.tic-tac-toe .x::after {
+	color: black;
+	display: block;
+	font-size: 5em;
+	position: absolute;
+	width: 100%;
+}
+
+.tic-tac-toe .o::after {
+	content: "○";
+	top: -0.2em;
+}
+
+.tic-tac-toe .x::after {
+	content: "×";
+	top: -0.125em;
+}
+
+.tic-tac-toe .o.highlighted::after,
+.tic-tac-toe .x.highlighted::after {
+	text-shadow:
+		0 0 1px #fff,
+		0 0 2px #fff,
+		0 0 3px #fff,
+		0 0 4px white,
+		0 0 5px white,
+		0 0 6px white,
+		0 0 7px white;
+}
+
+.log {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.login_form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.join {
+    display: flex;
+    flex-direction: column;
+}
+
+.create {
+
+    display: flex;
+    flex-direction: column;
+
+}
+
+@media screen and (min-width: 1000px){
+
+    .join {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .join input {
+        margin: 5px;
+    }
+
+    .create {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .create input {
+        margin: 5px;
+    }
+
+
+    .mainGlassBox {
+        width: 80%;
+    }
+
+    .login_form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #nameJoin {
+        height: fit-content ;
+    }
+
+    #gamePIN {
+
+        height: fit-content;
+
+    }
+
+    #nameCreate {
+
+        height: fit-content;
+
+    }
+
+}
+
+@media screen  and (max-width: 700px){
+
+    .bottomInfo {
+
+        font-size: small;
+        padding: 12px;
+
+    }
+
+    .tic-tac-toe p {
+        font-size: small;
+    }
+
+    .login_form h2 {
+        margin-left: 40px;
+    }
+
+    
+
+}
+
+.themeButton {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    height: 30px;
+    background-color: black ;
+    color: white;
+    font-weight: 700;
+}
